@@ -1,0 +1,1259 @@
+/*Se importa la fuente de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,400&display=swap');
+
+/*Se configura el espacio externo e interno del elemento*/
+/*Además, se configura es tamaño total del elemento teniendo en cuenta los bordes*/
+/*Se cambia a Fuente del proyecto*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-size: small;
+}
+
+/*Se crea la vista mobile del proyecto*/
+
+/*Se comienza con la estructura general del sitio*/
+
+body {
+    display: grid;
+    grid-template-rows: auto auto 110px;
+    grid-template-columns: auto;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+    ;    
+}
+
+/*Se configura el header*/
+header {
+    grid-area: header;
+    background-color: rgb(137, 210, 220);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 45px 105px;
+    grid-template-areas:
+    "tituloPagina menu"
+    "portada portada"
+    ;
+}
+
+.logoTitulo {
+    grid-area: tituloPagina;
+    background-color: rgb(137, 210, 220);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.logoTitulo h1 {
+    font-size: medium;
+    margin: 0px 5px 0px 5px;
+}
+
+.logoTitulo img {
+    margin: 0px 5px 0px 5px;
+    width: 40px;
+    height: 40px;
+}
+
+.menuHeader {
+    grid: menuHeader;
+}
+
+.menuHeader nav {
+    width: 100%;
+    height: 100%;
+}
+
+.menuHeader button {
+    background-color: rgb(137, 210, 220);
+    border: none;
+    padding: 5px;
+    text-align: end;
+    width: 100%;
+    height: 100%;
+}
+
+.menuHeader button img {
+    margin-right: 5px;
+    width: 15px;
+    width: 15px;
+}
+
+.menuHeader ul {
+    padding: 0px;
+    margin: 0px;
+    line-height: 14px;
+    background-color: rgb(148, 216, 230);
+    display: none;
+    list-style: none;
+    height: 105px;
+}
+
+.menuHeader li {
+    border: 1px solid black;
+    padding: 2px 5px 2px 5px;
+}
+
+.menuHeader ul a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    list-style-type: none;
+    font-size: smaller;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.portada {
+    grid-area: portada;
+}
+
+.portada img {
+    width: 100%;
+    height: 106px;
+}
+
+/* Mostrar el menú desplegable al hacer clic en el icono*/
+.menuHeader button:hover + ul, .menuHeader ul:hover {
+    position: relative;
+    display: block;
+    background-color: rgb(148, 216, 230);
+    list-style: none;
+    text-align: justify;
+    z-index: 10;
+}
+
+.menuHeader button:hover + li a, .menuHeader li a:hover {
+    font-size: small;
+}
+
+/*Media Query del menu en header*/
+@media  (min-width: 768px) {
+    .menuHeader button {
+        background-color: rgb(137, 210, 220);
+        display: none;
+        border: none;
+        padding: 5px;
+    }
+    
+    .menuHeader ul {
+        background-color: rgb(137, 210, 220);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-weight: bold;
+        height: 45px;
+    }
+
+    .menuHeader li {
+        border: none;
+        padding: 2px 5px 2px 5px;
+    }
+
+    .menuHeader button img {
+        display: none;
+    }
+
+    .menuHeader ul a {
+        text-decoration: none;
+        text-align: center;
+        color: black;
+        list-style-type: none;
+        font-size: small;
+        text-align: justify;
+        font-weight: bold;
+    }
+
+    /* Se elimina el menú desplegable que se mostraba al hacer el menú desplegable al hacer clic en el botón */
+    .menuHeader button:hover + ul, .menuHeader ul:hover {
+        background-color: rgb(137, 210, 220);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-weight: bold;
+        height: 45px;
+        box-shadow:rgb(66, 65, 65);
+    } 
+
+    .menuHeader button:hover + li a, .menuHeader li a:hover {
+        font-size: medium;
+    }
+
+}
+
+/*Se configura el main de Inicio*/
+
+#inicio {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+        "section1" 
+        "section2";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+#sobreArgentina {
+    background-color: rgb(137, 210, 220);
+    grid-area: section1;
+    height: auto;
+    width: auto;
+}
+
+.tituloSobreArgentina h2 {
+    text-align: center;
+    padding: 5px;
+    color: rgb(69, 63, 63);
+    font-size: medium;
+}
+
+.articleSobreArgentina {
+    text-align: center;
+    padding: 5px;
+}
+
+.articleSobreArgentina p {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    text-align: justify;
+    padding: 5px;
+}
+
+.articleSobreArgentina iframe {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#losMasBuscados {
+    background-color: rgb(137, 199, 211);
+    grid-area: section2;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+#losMasBuscados div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 100%;
+}
+
+#losMasBuscados div img {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#losMasBuscados div h2 {
+    color: rgb(69, 63, 63);
+    font-size: medium;
+    margin-left: 5px;
+    margin-right: 5px
+}
+
+#losMasBuscados article {
+    background-color: rgb(137, 199, 211);
+    display: grid;
+    text-align: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "lmbImagen"
+    "lmbTituloCiudad"
+    "lmbTextoCiudad"
+    ;
+    justify-items: center;
+    padding: 5px;
+}
+
+#losMasBuscados article img {
+    grid-area: lmbImagen;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#losMasBuscados article h3 {
+    grid-area: lmbTituloCiudad;
+    background-color: rgb(121, 179, 191);
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#losMasBuscados article p {
+    grid-area: lmbTextoCiudad;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    text-align: justify;
+    padding: 5px;
+    height: 75px;
+    width: 100%;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+
+/*Media Query para main de página de inicio*/
+@media  (min-width: 768px) {
+
+    #sobreArgentina {
+        width: auto;
+    }
+    
+    #sobreArgentina article {
+        display: grid;
+        grid-template-columns: 350px 450px;
+        grid-template-rows: 50px 250px;
+        grid-template-areas: 
+        "video parrafoSobreArgentina"
+        ;
+        justify-content: center;        
+    }
+    
+    #sobreArgentina article iframe {
+        grid-area: video;
+        margin-top: 10px;
+        width: 350px;
+        height: 250px;
+    }
+    
+    #sobreArgentina article p {
+        grid-area: parrafoSobreArgentina;
+        margin-top: 10px;
+        margin-left: 25px;
+        width: 400px;
+        height: 250px; 
+        overflow-y: hidden;
+    }
+
+    #losMasBuscados {
+        width: auto;
+    }
+
+    #losMasBuscados article {
+        display: grid;
+        grid-template-columns: 350px 450px;
+        grid-template-rows: 50px 250px;
+        grid-template-areas: 
+        "lmbImagen lmbTituloCiudad"
+        "lmbImagen lmbTextoCiudad"
+        ;
+        justify-content: center;
+    }
+    
+    #losMasBuscados article img {
+        grid-area: lmbImagen;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px; 
+        width: 350px;
+        height: 290px;
+    }
+
+    #losMasBuscados article h3 {
+        grid-area: lmbTituloCiudad;
+        width: 400px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    
+    #losMasBuscados article p {
+        grid-area: lmbTextoCiudad;
+        width: 400px;
+        height: 250px; 
+        overflow-y: hidden;
+    }
+
+}
+
+/*Se configura el main de Lugares*/
+#lugares {
+    background-color: rgb(137, 210, 220);
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "jurisdicciones"
+    "zonas"
+    ;
+    justify-content: center;
+    align-items: center;
+}
+
+#lugares .lugaresJurisdicciones {
+    grid-area: jurisdicciones;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.lugaresJurisdicciones h2 {
+    color: rgb(69, 63, 63);
+    font-size: medium;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.lugaresJurisdicciones p {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.selectorBoton button {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    justify-content: center;
+    width: 300px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.selectorJurisdiccionesListado {
+    border-radius: 5px;
+    display: none;
+    list-style: none;
+    font-weight: bold;
+}
+
+.selectorJurisdiccionesListado li {
+    background-color: rgb(137, 199, 211);
+    border: 2px solid black;
+    width: 300px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.selectorJurisdiccionesListado a {
+    color: black;
+    text-decoration: none;
+    width: auto;
+}
+
+.selectorBoton:hover + .selectorJurisdiccionesListado, .selectorJurisdiccionesListado:hover {
+    display: inline-block;
+}
+
+.lugaresZonas {
+    background-color: rgb(137, 199, 211);
+}
+
+.lugaresZonas section {
+    grid-area: zonas;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 40px 1fr;
+    grid-template-areas: 
+    "tituloCiudad tituloCiudad"
+    "cuadrante1 cuadrante2"
+    "cuadrante3 cuadrante4"
+    ;
+}
+
+.lugaresZonas section h3 {
+    grid-area: tituloCiudad;
+    text-align: center;
+    color: rgb(69, 63, 63);
+    font-size: small;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.lugaresZonas .cuadrante_1 {
+    grid-area: cuadrante1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.lugaresZonas .cuadrante_2 {
+    grid-area: cuadrante2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.lugaresZonas .cuadrante_3 {
+    grid-area: cuadrante3;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.lugaresZonas .cuadrante_4 {
+    grid-area: cuadrante4;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.lugaresZonas div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lugaresZonas h4 {
+    background-color: white;
+    border: solid black;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: rgb(69, 63, 63);
+    width: 150px;
+    height: 75px;
+    text-align: center;
+    padding: 5px;
+}
+
+.lugaresZonas img {
+    border: 2px solid black;
+    border-bottom: none;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    width: 150px;
+    height: 100px;
+}
+
+/*Media Query para main de página de inicio*/
+@media  (min-width: 768px) {
+    #lugares {
+        background-color: rgb(137, 210, 220);
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 0.2fr 3fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "jurisdicciones"
+        "zonas"
+        ;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .lugaresJurisdicciones h2 {
+        color: rgb(69, 63, 63);
+        font-size: medium;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .lugaresJurisdicciones p {
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: white;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .selectorBoton button {
+        display: none;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 5px;
+        justify-content: center;
+        width: 300px;
+        height: 25px;
+        margin-top: 10px;
+    }
+
+    .selectorJurisdiccionesListado {
+        display: inline-block;
+        list-style: none;
+        font-weight: bold;
+    }
+    
+    .selectorJurisdiccionesListado li {
+        background-color: rgb(137, 199, 211);
+        border: 2px solid black;
+        width: 150px;
+        border-radius: 0px;
+        padding: 5px;
+    }
+
+    .selectorBoton:hover + .selectorJurisdiccionesListado, .selectorJurisdiccionesListado:hover {
+        display: inline-block;
+    }
+
+    #lugares .lugaresJurisdicciones {
+        grid-area: jurisdicciones;
+        padding: 5px;
+        align-items: start;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .lugaresZonas {
+        overflow-y: scroll;
+        height: 880px;
+    }
+        
+    .lugaresZonas section {
+        grid-area: zonas;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 40px auto;
+        grid-template-areas: 
+        "tituloCiudad tituloCiudad tituloCiudad tituloCiudad"
+        "cuadrante1 cuadrante2 cuadrante3 cuadrante4"
+        ;
+    }
+
+    .lugaresZonas section h3 {
+        grid-area: tituloCiudad;
+    }
+
+    .lugaresZonas .cuadrante_1 {
+        grid-area: cuadrante1;
+    }
+
+    .lugaresZonas .cuadrante_2 {
+        grid-area: cuadrante2;
+    }
+
+    .lugaresZonas .cuadrante_3 {
+        grid-area: cuadrante3;
+    }
+
+    .lugaresZonas .cuadrante_4 {
+        grid-area: cuadrante4;
+    }
+}
+
+/*Se configura el main de Historia*/
+#historia {
+    background-color: rgb(137, 210, 220);
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "jurisdicciones"
+    "zonas"
+    ;
+    justify-content: center;
+    align-items: center;
+}
+
+#historia .historiaJurisdicciones {
+    grid-area: jurisdicciones;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.historiaJurisdicciones h2 {
+    color: rgb(69, 63, 63);
+    font-size: medium;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.historiaJurisdicciones p {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.selectorBotonHistoria button {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    justify-content: center;
+    width: 300px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.selectorJurisdiccionesListadoHistoria {
+    border-radius: 5px;
+    display: none;
+    list-style: none;
+    font-weight: bold;
+}
+
+.selectorJurisdiccionesListadoHistoria li {
+    background-color: rgb(137, 199, 211);
+    border: 2px solid black;
+    width: 300px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.selectorJurisdiccionesListadoHistoria a {
+    color: black;
+    text-decoration: none;
+    width: auto;
+}
+
+.selectorBotonHistoria:hover + .selectorJurisdiccionesListadoHistoria, .selectorJurisdiccionesListadoHistoria:hover {
+    display: inline-block;
+}
+
+.historiaArgentina {
+    background-color: rgb(137, 199, 211);
+}
+
+.historiaArgentina article {
+    grid-area: zonas;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.historiaArgentina article h2 {
+    color: rgb(69, 63, 63);
+    font-size: medium;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.historiaArgentina article h3 {
+    color: rgb(69, 63, 63);
+    font-size: small;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.historiaArgentina article h4 {
+    color: rgb(69, 63, 63);
+    font-size: smaller;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.historiaArgentina article p {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px;
+    text-align: justify;
+    width: auto;
+    height: auto;
+    
+}
+
+#historia div {
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#historia  img {
+    width: 70px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+#historia .bandera {
+    width: 250px;
+    height: 150px;
+}
+
+#historia .ubicacionArgentina {
+    width: 250px;
+    height: 150px;
+}
+
+#historia article iframe {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 250px;
+    height: 150px;
+}
+
+#historia article audio {
+    width: 250px;
+}
+
+/*Media Query para main de página de inicio*/
+@media  (min-width: 768px) {
+
+    #historia {
+        background-color: rgb(137, 210, 220);
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 0.2fr 3fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "jurisdiccionesHistoria"
+        "zonasHistoria"
+        ;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .historiaJurisdicciones h2 {
+        color: rgb(69, 63, 63);
+        font-size: medium;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .historiaJurisdicciones p {
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: white;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .selectorBotonHistoria button {
+        display: none;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 5px;
+        justify-content: center;
+        width: 300px;
+        height: 25px;
+        margin-top: 10px;
+    }
+
+    .selectorJurisdiccionesListadoHistoria {
+        display: inline-block;
+        list-style: none;
+        font-weight: bold;
+    }
+
+    .selectorJurisdiccionesListadoHistoria li {
+        background-color: rgb(137, 199, 211);
+        border: 2px solid black;
+        width: 150px;
+        border-radius: 0px;
+        padding: 5px;
+    }
+
+    .selectorBotonHistoria:hover + .selectorJurisdiccionesListadoHistoria, .selectorJurisdiccionesListadoHistoria:hover {
+        display: inline-block;
+    }
+
+    #historia .historiaJurisdicciones {
+        grid-area: jurisdiccionesHistoria;
+        padding: 5px;
+        align-items: start;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .historiaArgentina {
+        overflow-y: scroll;
+        height: 880px;
+    }
+        
+    .historiaArgentina article {
+        grid-area: zonasHistoria;
+        display: grid;
+        grid-template-columns: auto 300px;
+        grid-template-rows: 50px auto;
+        grid-template-areas:
+        "tituloCiudadHistoria tituloCiudadHistoria"
+        "parrafoHistoria Imagenes_audio"
+        ;
+        justify-content: center;
+        align-items: center;
+    }    
+
+    .historiaArgentina article h2 {
+        grid-area: tituloCiudadHistoria;
+        text-align: center;
+    }   
+
+    .historiaArgentina article h3 {
+        grid-area: tituloCiudadHistoria;
+        text-align: center;
+    }
+
+    .historiaArgentina article p {
+        grid-area: parrafoHistoria;
+        border: 2px solid black;
+        width: 100%;
+        max-width: 350px;
+        margin: 10px;
+        height: 100%;
+        margin: 10px 5px 10px 5px;
+    }
+    
+    .historiaArgentina article div {
+        grid-area: Imagenes_audio;
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}
+
+/*Se configura el main de Sobre Nosotros*/
+#sobreNosotros {
+    grid-area: main;
+    background-color: rgb(137, 210, 220);
+}
+
+#sobreNosotros .col-6 {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sobreNosotros .cont1 {
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+#sobreNosotros h1 {
+    color: rgb(69, 63, 63);
+    font-size: medium;
+}
+
+#sobreNosotros .cont2  {
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 10px 0px;
+    flex-direction: column;
+}
+
+#sobreNosotros .textoNosotros {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 10px;
+    max-width: 310px;
+}
+
+#sobreNosotros p {
+    min-width: 290px;
+}
+
+#sobreNosotros img {
+    border: 2px solid black;
+    margin-top: 10px;
+    border-radius: 5px;
+    max-width: 300px;
+}
+
+@media  (min-width: 768px) {
+    #sobreNosotros {
+        height: 70vh;
+    }
+
+    #sobreNosotros .cont2  {
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    #sobreNosotros .textoNosotros {
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: white;
+        text-align: justify;
+        justify-content: center;
+        padding: 5px;
+        margin: 0px 10px 0px 10px;
+    }
+
+    #sobreNosotros p {
+        height: 247px;
+    }
+
+    #sobreNosotros section div img {
+        margin-top: 0px;
+        border-radius: 5px;
+        height: 275px;
+        width: 350px
+    }
+
+}
+
+
+/*Se configura el main de Contacto*/
+#contacto {
+    grid-area: main;
+    background-color: rgb(137, 210, 220);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "titulo"
+    "formulario"
+    ;
+    justify-content: center;
+}
+
+#contacto h2 {
+    grid-area: titulo;
+    color: rgb(69, 63, 63);
+    font-size: medium;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.formulario div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    grid-area: formulario;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+label {
+    color: rgb(69, 63, 63);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.entradaNombre input {
+    display: block;
+	border: 2px solid black;
+    border-radius: 10px;
+	padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	width: 300px;
+}
+
+.entradaEmail input {
+    display: block;
+	border: 2px solid black;
+    border-radius: 10px;
+	padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	width: 300px;
+}
+
+textarea {
+    display: block;
+	border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 10px;
+	resize: none;
+	padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	width: 300px;
+	height: 100px;
+}
+
+.botones {
+    position: relative;
+    width: 300px;
+    height: 50px;
+}
+
+#reset {
+    display: inline-block;
+    position: absolute;
+    left: 15%;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+
+#submit {
+    display: inline-block;
+    position: absolute;
+    right: 15%;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+
+.boton {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    width: 90px;
+}
+
+/*Media Query para main de página de Contacto*/
+
+@media  (min-width: 768px) {    
+    #contacto {
+        grid-area: main;
+        background-color: rgb(137, 210, 220);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 66vh;
+    }
+
+    #contacto h2 {
+        grid-area: tituloContacto;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    .formulario {
+        grid-area: formularioDeContacto;
+        display: grid;
+        grid-template-columns: 420px 420px;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "nombre consulta"
+        "email consulta"
+        "botones botones"
+        ;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .formulario div {
+        display: inline-block;
+        justify-content: start;
+        align-items: center;
+        padding: 10px;
+    }
+
+    form .entradaNombre {
+        position: relative;
+        grid-area: nombre;
+        width: auto;
+        left: 17%;
+        margin: 0px;
+    }
+
+    form .entradaEmail {
+        position: relative;
+        grid-area: email;
+        width: auto;
+        left: 17%;
+        margin: 0px;
+    }
+
+    form .entradaConsulta {
+        position: relative;
+        grid-area: consulta;
+        width: auto;
+        margin: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        left: 10%;
+    }
+
+    form textarea {
+        width: 350px;
+        height: 150px;
+    }
+
+    form .botones {
+        position: relative;
+        grid-area: botones;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin: 0px;
+    }
+    
+    #reset {
+        position: absolute;
+        top: -10px;
+        left: 25%;
+    }
+
+    #submit {
+        position: absolute;
+        top: -10px;
+        right: 25%
+    }
+
+    .boton {
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 5px;
+        width: 150px;
+    }
+    
+}
+
+/*Se configura el footer*/
+
+footer {
+    background-color: rgb(66, 65, 65);
+    grid-area: footer;
+    text-align: center;
+}
+
+footer h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    padding: 5px;
+}
+
+footer div {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+footer img {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+}
