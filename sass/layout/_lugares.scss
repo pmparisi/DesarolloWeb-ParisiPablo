@@ -1,0 +1,276 @@
+/*Se configura el main de Lugares*/
+#lugares {
+    background-color: rgb(137, 210, 220);
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "jurisdicciones"
+    "zonas"
+    ;
+    justify-content: center;
+    align-items: center;
+
+    .lugaresJurisdicciones {
+        grid-area: jurisdicciones;
+        padding: 5px;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+.lugaresJurisdicciones {
+    h2 {
+        color: rgb(69, 63, 63);
+        font-size: medium;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    
+    p {
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: white;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}  
+
+.selectorBoton {
+    button {
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 5px;
+        justify-content: center;
+        width: 300px;
+        height: 25px;
+        margin-top: 10px;
+    }
+
+} 
+
+.selectorJurisdiccionesListado {
+    border-radius: 5px;
+    display: none;
+    list-style: none;
+    font-weight: bold;
+
+    li {
+        background-color: rgb(137, 199, 211);
+        border: 2px solid black;
+        width: 300px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        width: auto;
+    }
+    
+    .selectorBoton:hover + &, &:hover {
+        display: inline-block;
+    }
+}
+
+.lugaresZonas {
+    background-color: rgb(137, 199, 211);
+
+    section {
+        grid-area: zonas;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 40px 1fr;
+        grid-template-areas: 
+        "tituloCiudad tituloCiudad"
+        "cuadrante1 cuadrante2"
+        "cuadrante3 cuadrante4"
+        ;
+
+        h3 {
+            grid-area: tituloCiudad;
+            text-align: center;
+            color: rgb(69, 63, 63);
+            font-size: small;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    
+
+    .cuadrante_1 {
+        grid-area: cuadrante1;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .cuadrante_2 {
+        grid-area: cuadrante2;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .cuadrante_3 {
+        grid-area: cuadrante3;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .cuadrante_4 {
+        grid-area: cuadrante4;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h4 {
+        background-color: white;
+        border: solid black;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        color: rgb(69, 63, 63);
+        width: 150px;
+        height: 75px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    img {
+        border: 2px solid black;
+        border-bottom: none;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        width: 150px;
+        height: 100px;
+    }
+}
+
+/*Media Query para main de página de lugares*/
+@media  (min-width: 768px) {
+    #lugares {
+        background-color: rgb(137, 210, 220);
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 0.2fr 3fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "jurisdicciones"
+        "zonas"
+        ;
+        justify-content: center;
+        align-items: center;
+
+        .lugaresJurisdicciones {
+            grid-area: jurisdicciones;
+            padding: 5px;
+            align-items: start;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+    
+    .lugaresJurisdicciones {
+        h2 {
+            color: rgb(69, 63, 63);
+            font-size: medium;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        p {
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: white;
+            padding: 5px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .selectorBoton {
+        button {
+            display: none;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 5px;
+            justify-content: center;
+            width: 300px;
+            height: 25px;
+            margin-top: 10px;
+        }
+    } 
+
+    .selectorJurisdiccionesListado {
+        display: inline-block;
+        list-style: none;
+        font-weight: bold;
+
+        li {
+            background-color: rgb(137, 199, 211);
+            border: 2px solid black;
+            width: 150px;
+            border-radius: 0px;
+            padding: 5px;
+        }
+
+        .selectorBoton:hover + &, &:hover {
+            display: inline-block;
+        }
+    }    
+
+    .lugaresZonas {
+        overflow-y: scroll;
+        height: 880px;
+
+        section {
+            grid-area: zonas;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: 40px auto;
+            grid-template-areas: 
+            "tituloCiudad tituloCiudad tituloCiudad tituloCiudad"
+            "cuadrante1 cuadrante2 cuadrante3 cuadrante4"
+            ;
+
+            h3 {
+                grid-area: tituloCiudad;
+            }
+        }
+
+        .cuadrante_1 {
+            grid-area: cuadrante1;
+        }
+
+        .cuadrante_2 {
+            grid-area: cuadrante2;
+        }
+
+        .cuadrante_3 {
+            grid-area: cuadrante3;
+        }
+
+        .cuadrante_4 {
+            grid-area: cuadrante4;
+        }
+    }
+}

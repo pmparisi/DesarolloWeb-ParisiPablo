@@ -1,0 +1,194 @@
+/*Se configura el main de Inicio*/
+
+#inicio {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+        "section1" 
+        "section2";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+#sobreArgentina {
+    background-color: rgb(137, 210, 220);
+    grid-area: section1;
+    height: auto;
+    width: auto;
+}
+
+.tituloSobreArgentina h2 {
+    text-align: center;
+    padding: 5px;
+    color: rgb(69, 63, 63);
+    font-size: medium;
+}
+
+.articleSobreArgentina {
+    text-align: center;
+    padding: 5px;
+
+    p {
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: white;
+        text-align: justify;
+        padding: 5px;
+    }
+
+    iframe {
+        border: 2px solid black;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+#losMasBuscados {
+    background-color: rgb(137, 199, 211);
+    grid-area: section2;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        width: 100%;
+
+        img {
+            width: 30px;
+            height: 30px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        h2 {
+            color: rgb(69, 63, 63);
+            font-size: medium;
+            margin-left: 5px;
+            margin-right: 5px
+        }
+    }
+
+    article {
+        background-color: rgb(137, 199, 211);
+        display: grid;
+        text-align: center;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "lmbImagen"
+        "lmbTituloCiudad"
+        "lmbTextoCiudad"
+        ;
+        justify-items: center;
+        padding: 5px;
+
+        img {
+            grid-area: lmbImagen;
+            border: 2px solid black;
+            border-radius: 5px;
+            width: 300px;
+            height: 300px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            grid-area: lmbTituloCiudad;
+            background-color: rgb(121, 179, 191);
+            border: 2px solid black;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        p {
+            grid-area: lmbTextoCiudad;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: white;
+            text-align: justify;
+            padding: 5px;
+            height: 75px;
+            width: 100%;
+            overflow-y: scroll;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/*Media Query para main de página de inicio*/
+@media  (min-width: 768px) {
+
+    #sobreArgentina {
+        width: auto;
+
+        article {
+            display: grid;
+            grid-template-columns: 350px 450px;
+            grid-template-rows: 50px 250px;
+            grid-template-areas: 
+            "video parrafoSobreArgentina"
+            ;
+            justify-content: center;    
+            
+            iframe {
+                grid-area: video;
+                margin-top: 10px;
+                width: 350px;
+                height: 250px;
+            }
+
+            p {
+                grid-area: parrafoSobreArgentina;
+                margin-top: 10px;
+                margin-left: 25px;
+                width: 400px;
+                height: 250px; 
+                overflow-y: hidden;
+            }
+        }
+
+        
+    }
+    
+    #losMasBuscados {
+        width: auto;
+
+        article {
+            display: grid;
+            grid-template-columns: 350px 450px;
+            grid-template-rows: 50px 250px;
+            grid-template-areas: 
+            "lmbImagen lmbTituloCiudad"
+            "lmbImagen lmbTextoCiudad"
+            ;
+            justify-content: center;
+
+            img {
+                grid-area: lmbImagen;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-right: 10px; 
+                width: 350px;
+                height: 290px;
+            }
+
+            h3 {
+                grid-area: lmbTituloCiudad;
+                width: 400px;
+                margin-top: 10px;
+                margin-bottom: 0px;
+            }
+
+            p {
+                grid-area: lmbTextoCiudad;
+                width: 400px;
+                height: 250px; 
+                overflow-y: hidden;
+            }
+        }
+    }
+}

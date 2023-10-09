@@ -1,0 +1,214 @@
+/*Se configura el main de Contacto*/
+#contacto {
+    grid-area: main;
+    background-color: rgb(137, 210, 220);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "titulo"
+    "formulario"
+    ;
+    justify-content: center;
+
+    h2 {
+        grid-area: titulo;
+        color: rgb(69, 63, 63);
+        font-size: medium;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+}
+
+
+.formulario {
+    div {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        grid-area: formulario;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+} 
+
+label {
+    color: rgb(69, 63, 63);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.entradaNombre {
+    input {
+        display: block;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 300px;
+    }
+}
+
+.entradaEmail{
+    input {
+        display: block;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 300px;
+    }
+}
+
+textarea {
+    display: block;
+	border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 10px;
+	resize: none;
+	padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	width: 300px;
+	height: 100px;
+}
+
+.botones {
+    position: relative;
+    width: 300px;
+    height: 50px;
+}
+
+#reset {
+    display: inline-block;
+    position: absolute;
+    left: 15%;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+#submit {
+    display: inline-block;
+    position: absolute;
+    right: 15%;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.boton {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    width: 90px;
+}
+
+/*Media Query para main de página de Contacto*/
+@media  (min-width: 768px) {    
+    #contacto {
+        grid-area: main;
+        background-color: rgb(137, 210, 220);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 66vh;
+
+        h2 {
+            grid-area: tituloContacto;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+    }
+
+    .formulario {
+        grid-area: formularioDeContacto;
+        display: grid;
+        grid-template-columns: 420px 420px;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "nombre consulta"
+        "email consulta"
+        "botones botones"
+        ;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        div {
+            display: inline-block;
+            justify-content: start;
+            align-items: center;
+            padding: 10px;
+        }
+    }
+
+    form {
+        .entradaNombre {
+            position: relative;
+            grid-area: nombre;
+            width: auto;
+            left: 17%;
+            margin: 0px;
+        }
+        
+        .entradaEmail {
+            position: relative;
+            grid-area: email;
+            width: auto;
+            left: 17%;
+            margin: 0px;
+        }
+
+        .entradaConsulta {
+            position: relative;
+            grid-area: consulta;
+            width: auto;
+            margin: 0px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            left: 10%;
+        }
+
+        textarea {
+            width: 350px;
+            height: 150px;
+        }
+
+        .botones {
+            position: relative;
+            grid-area: botones;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            margin: 0px;
+        }
+    }  
+
+    #reset {
+        position: absolute;
+        top: -10px;
+        left: 25%;
+    }
+
+    #submit {
+        position: absolute;
+        top: -10px;
+        right: 25%
+    }
+
+    .boton {
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 5px;
+        width: 150px;
+    }   
+}

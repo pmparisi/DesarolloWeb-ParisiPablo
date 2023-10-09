@@ -1,0 +1,91 @@
+/*Se configura el main de Sobre Nosotros*/
+#sobreNosotros {
+    grid-area: main;
+    background-color: rgb(137, 210, 220);
+
+    .col-6 {
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cont1 {
+        margin: 10px 0px 10px 0px;
+        text-align: center;
+    }
+
+    h1 {
+        color: rgb(69, 63, 63);
+        font-size: medium;
+        font-weight: bolder;
+    }
+
+    .cont2  {
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0px 10px 0px;
+        flex-direction: column;
+    }
+
+    .textoNosotros {
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: white;
+        text-align: justify;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        margin-bottom: 10px;
+        max-width: 310px;
+    }
+
+    p {
+        min-width: 290px;
+    }
+
+    img {
+        border: 2px solid black;
+        margin-top: 10px;
+        border-radius: 5px;
+        max-width: 300px;
+    }
+}
+
+/*Media Query para main de página de Sobre Nosotros*/
+@media  (min-width: 768px) {
+    #sobreNosotros {
+        height: 70vh;
+
+        .cont2  {
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .textoNosotros {
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: white;
+            text-align: justify;
+            justify-content: center;
+            padding: 5px;
+            margin: 0px 10px 0px 10px;
+        }
+
+        p {
+            height: 247px;
+        }
+
+        section {
+            div {
+                img {
+                    margin-top: 0px;
+                    border-radius: 5px;
+                    height: 275px;
+                    width: 350px
+                }
+            } 
+        } 
+    }
+}

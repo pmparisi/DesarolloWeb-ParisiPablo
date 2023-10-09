@@ -1,0 +1,163 @@
+/*Se configura el header*/
+header {
+    grid-area: header;
+    background-color: rgb(137, 210, 220);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 45px 105px;
+    grid-template-areas:
+    "tituloPagina menu"
+    "portada portada"
+    ;
+}
+
+
+.logoTitulo {
+    grid-area: tituloPagina;
+    background-color: rgb(137, 210, 220);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    h1 {
+        font-size: medium;
+        margin: 0px 5px 0px 5px;
+    }
+
+    img {
+        margin: 0px 5px 0px 5px;
+        width: 40px;
+        height: 40px;
+    }    
+}
+
+.menuHeader {
+    grid: menuHeader;
+
+    nav {
+        width: 100%;
+        height: 100%;
+    }
+
+    button {
+        background-color: rgb(137, 210, 220);
+        border: none;
+        padding: 5px;
+        text-align: end;
+        width: 100%;
+        height: 100%;
+
+        img {
+            margin-right: 5px;
+            width: 15px;
+            width: 15px;
+        }
+    }
+
+    ul {
+        padding: 0px;
+        margin: 0px;
+        line-height: 14px;
+        background-color: rgb(148, 216, 230);
+        display: none;
+        list-style: none;
+        height: 105px;
+
+        a {
+            text-decoration: none;
+            text-align: center;
+            color: black;
+            list-style-type: none;
+            font-size: smaller;
+            text-align: justify;
+            font-weight: bold;
+        }
+    }
+
+    li {
+        border: 1px solid black;
+        padding: 2px 5px 2px 5px;
+    }
+
+    & button:hover + ul, & ul:hover {
+        position: relative;
+        display: block;
+        background-color: rgb(148, 216, 230);
+        list-style: none;
+        text-align: justify;
+        z-index: 10;
+    }
+    
+    & button:hover + li a, & li a:hover {
+        font-size: small;
+    }
+}
+
+.portada {
+    grid-area: portada;
+
+    img {
+        width: 100%;
+        height: 106px;
+    }
+}
+
+/*Media Query del menu en header*/
+@media  (min-width: 768px) {
+    .menuHeader{
+        button {
+            background-color: rgb(137, 210, 220);
+            display: none;
+            border: none;
+            padding: 5px;
+
+            img {
+                display: none;
+            }
+        }
+
+        ul {
+            background-color: rgb(137, 210, 220);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-weight: bold;
+            height: 45px;
+
+            a {
+                text-decoration: none;
+                text-align: center;
+                color: black;
+                list-style-type: none;
+                font-size: small;
+                text-align: justify;
+                font-weight: bold;
+            }        
+        }
+
+        li {
+            border: none;
+            padding: 2px 5px 2px 5px;
+        }
+
+        /* Se elimina el menú desplegable que se mostraba al hacer el menú desplegable al hacer clic en el botón */
+        & button:hover + ul, & ul:hover {
+            background-color: rgb(137, 210, 220);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-weight: bold;
+            height: 45px;
+            box-shadow:rgb(66, 65, 65);
+        } 
+
+        & button:hover + li a, & li a:hover {
+            font-size: medium;
+        }
+    } 
+
+     
+
+
+
+}

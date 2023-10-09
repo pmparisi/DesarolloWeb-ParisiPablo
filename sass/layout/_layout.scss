@@ -1,0 +1,28 @@
+/*Se importa la fuente de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,400&display=swap');
+
+/*Se configura el espacio externo e interno del elemento*/
+/*Además, se configura es tamaño total del elemento teniendo en cuenta los bordes*/
+/*Se cambia a Fuente del proyecto*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-size: small;
+}
+
+/*Se crea la vista mobile del proyecto*/
+
+/*Se comienza con la estructura general del sitio*/
+
+body {
+    display: grid;
+    grid-template-rows: auto auto 110px;
+    grid-template-columns: auto;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+    ;    
+}
