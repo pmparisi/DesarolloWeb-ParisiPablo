@@ -24,7 +24,8 @@ body {
 /*Se configura el header*/
 header {
   grid-area: header;
-  background-color: rgb(137, 210, 220);
+  background: rgb(135, 231, 255);
+  background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 45px 105px;
@@ -33,7 +34,8 @@ header {
 
 .logoTitulo {
   grid-area: tituloPagina;
-  background-color: rgb(137, 210, 220);
+  background: rgb(135, 231, 255);
+  background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
   display: flex;
   justify-content: start;
   align-items: center;
@@ -56,7 +58,8 @@ header {
   height: 100%;
 }
 .menuHeader button {
-  background-color: rgb(137, 210, 220);
+  background: rgb(135, 231, 255);
+  background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
   border: none;
   padding: 5px;
   text-align: end;
@@ -72,7 +75,8 @@ header {
   padding: 0px;
   margin: 0px;
   line-height: 14px;
-  background-color: rgb(148, 216, 230);
+  background: rgb(135, 231, 255);
+  background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
   display: none;
   list-style: none;
   height: 105px;
@@ -93,7 +97,8 @@ header {
 .menuHeader button:hover + ul, .menuHeader ul:hover {
   position: relative;
   display: block;
-  background-color: rgb(148, 216, 230);
+  background: rgb(135, 231, 255);
+  background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
   list-style: none;
   text-align: justify;
   z-index: 10;
@@ -113,10 +118,12 @@ header {
 /*Media Query del menu en header*/
 @media (min-width: 768px) {
   .menuHeader {
-    /* Se elimina el menú desplegable que se mostraba al hacer el menú desplegable al hacer clic en el botón */
+    grid: menuHeader;
+    /* Se elimina el menú desplegable que se mostraba al hacer clic en el botón */
   }
   .menuHeader button {
-    background-color: rgb(137, 210, 220);
+    background: rgb(135, 231, 255);
+    background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
     display: none;
     border: none;
     padding: 5px;
@@ -125,7 +132,8 @@ header {
     display: none;
   }
   .menuHeader ul {
-    background-color: rgb(137, 210, 220);
+    background: rgb(135, 231, 255);
+    background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -146,7 +154,8 @@ header {
     padding: 2px 5px 2px 5px;
   }
   .menuHeader button:hover + ul, .menuHeader ul:hover {
-    background-color: rgb(137, 210, 220);
+    background: rgb(135, 231, 255);
+    background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -168,7 +177,8 @@ header {
 }
 
 #sobreArgentina {
-  background-color: rgb(137, 210, 220);
+  background: rgb(135, 231, 255);
+  background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
   grid-area: section1;
   height: auto;
   width: auto;
@@ -199,7 +209,8 @@ header {
 }
 
 #losMasBuscados {
-  background-color: rgb(137, 199, 211);
+  background: rgb(0, 183, 228);
+  background: linear-gradient(0deg, rgb(0, 183, 228) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
   grid-area: section2;
   display: flex;
   flex-direction: column;
@@ -225,7 +236,6 @@ header {
   margin-right: 5px;
 }
 #losMasBuscados article {
-  background-color: rgb(137, 199, 211);
   display: grid;
   text-align: center;
   grid-template-columns: 100%;
@@ -245,10 +255,14 @@ header {
 }
 #losMasBuscados article h3 {
   grid-area: lmbTituloCiudad;
-  background-color: rgb(121, 179, 191);
+  background: rgb(51, 170, 255);
+  background: linear-gradient(180deg, rgb(51, 170, 255) 5%, rgb(137, 217, 252) 50%, rgb(51, 170, 255) 95%);
   border: 2px solid black;
   border-radius: 5px;
   width: 100%;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
 }
 #losMasBuscados article p {
   grid-area: lmbTextoCiudad;
@@ -322,7 +336,8 @@ header {
 }
 /*Se configura el main de Lugares*/
 #lugares {
-  background-color: rgb(137, 210, 220);
+  background: rgb(135, 231, 255);
+  background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
   grid-area: main;
   display: grid;
   grid-template-columns: 100%;
@@ -376,7 +391,8 @@ header {
   font-weight: bold;
 }
 .selectorJurisdiccionesListado li {
-  background-color: rgb(137, 199, 211);
+  background: rgb(51, 170, 255);
+  background: linear-gradient(180deg, rgb(51, 170, 255) 5%, rgb(137, 217, 252) 50%, rgb(51, 170, 255) 95%);
   border: 2px solid black;
   width: 300px;
   border-radius: 5px;
@@ -392,7 +408,8 @@ header {
 }
 
 .lugaresZonas {
-  background-color: rgb(137, 199, 211);
+  background: rgb(0, 183, 228);
+  background: linear-gradient(0deg, rgb(0, 183, 228) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
 }
 .lugaresZonas section {
   grid-area: zonas;
@@ -414,20 +431,36 @@ header {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.lugaresZonas .cuadrante_1:hover {
+  transition: 2500ms;
+  transform: rotateY(360deg);
+}
 .lugaresZonas .cuadrante_2 {
   grid-area: cuadrante2;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.lugaresZonas .cuadrante_2:hover {
+  transition: 2500ms;
+  transform: rotateY(360deg);
 }
 .lugaresZonas .cuadrante_3 {
   grid-area: cuadrante3;
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.lugaresZonas .cuadrante_3:hover {
+  transition: 2500ms;
+  transform: rotateY(360deg);
+}
 .lugaresZonas .cuadrante_4 {
   grid-area: cuadrante4;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.lugaresZonas .cuadrante_4:hover {
+  transition: 2500ms;
+  transform: rotateY(360deg);
 }
 .lugaresZonas div {
   display: flex;
@@ -534,19 +567,36 @@ header {
   .lugaresZonas .cuadrante_1 {
     grid-area: cuadrante1;
   }
+  .lugaresZonas .cuadrante_1:hover {
+    transition: 2500ms;
+    transform: rotateY(360deg);
+  }
   .lugaresZonas .cuadrante_2 {
     grid-area: cuadrante2;
+  }
+  .lugaresZonas .cuadrante_2:hover {
+    transition: 2500ms;
+    transform: rotateY(360deg);
   }
   .lugaresZonas .cuadrante_3 {
     grid-area: cuadrante3;
   }
+  .lugaresZonas .cuadrante_3:hover {
+    transition: 2500ms;
+    transform: rotateY(360deg);
+  }
   .lugaresZonas .cuadrante_4 {
     grid-area: cuadrante4;
+  }
+  .lugaresZonas .cuadrante_4:hover {
+    transition: 2500ms;
+    transform: rotateY(360deg);
   }
 }
 /*Se configura el main de Historia*/
 #historia {
-  background-color: rgb(137, 210, 220);
+  background: rgb(135, 231, 255);
+  background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
   grid-area: main;
   display: grid;
   grid-template-columns: 100%;
@@ -600,7 +650,8 @@ header {
   font-weight: bold;
 }
 .selectorJurisdiccionesListadoHistoria li {
-  background-color: rgb(137, 199, 211);
+  background: rgb(51, 170, 255);
+  background: linear-gradient(180deg, rgb(51, 170, 255) 5%, rgb(137, 217, 252) 50%, rgb(51, 170, 255) 95%);
   border: 2px solid black;
   width: 300px;
   border-radius: 5px;
@@ -616,7 +667,8 @@ header {
 }
 
 .historiaArgentina {
-  background-color: rgb(137, 199, 211);
+  background: rgb(0, 183, 228);
+  background: linear-gradient(0deg, rgb(0, 183, 228) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
 }
 .historiaArgentina article {
   grid-area: zonas;
@@ -690,7 +742,6 @@ header {
 /*Media Query para main de página de historia*/
 @media (min-width: 768px) {
   #historia {
-    background-color: rgb(137, 210, 220);
     grid-area: main;
     display: grid;
     grid-template-columns: 0.2fr 3fr;
@@ -790,7 +841,8 @@ header {
 /*Se configura el main de Sobre Nosotros*/
 #sobreNosotros {
   grid-area: main;
-  background-color: rgb(137, 210, 220);
+  background: rgb(135, 231, 255);
+  background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
 }
 #sobreNosotros .col-6 {
   padding: 0px;
@@ -802,9 +854,10 @@ header {
   margin: 10px 0px 10px 0px;
   text-align: center;
 }
-#sobreNosotros h1 {
+#sobreNosotros h2 {
   color: rgb(69, 63, 63);
   font-size: medium;
+  font-weight: bold;
 }
 #sobreNosotros .cont2 {
   justify-content: center;
@@ -865,7 +918,8 @@ header {
 /*Se configura el main de Contacto*/
 #contacto {
   grid-area: main;
-  background-color: rgb(137, 210, 220);
+  background: rgb(135, 231, 255);
+  background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto;
@@ -966,7 +1020,6 @@ textarea {
 @media (min-width: 768px) {
   #contacto {
     grid-area: main;
-    background-color: rgb(137, 210, 220);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

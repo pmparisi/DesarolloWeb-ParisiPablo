@@ -1,5 +1,4 @@
 /*Se configura el main de Inicio*/
-
 #inicio {
     grid-area: main;
     display: grid;
@@ -11,7 +10,8 @@
 }
 
 #sobreArgentina {
-    background-color: rgb(137, 210, 220);
+    background: rgb(135,231,255);
+    background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
     grid-area: section1;
     height: auto;
     width: auto;
@@ -44,7 +44,8 @@
 }
 
 #losMasBuscados {
-    background-color: rgb(137, 199, 211);
+    background: rgb(0,183,228);
+    background: linear-gradient(0deg, rgba(0,183,228,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
     grid-area: section2;
     display: flex;
     flex-direction: column;
@@ -73,7 +74,6 @@
     }
 
     article {
-        background-color: rgb(137, 199, 211);
         display: grid;
         text-align: center;
         grid-template-columns: 100%;
@@ -98,10 +98,15 @@
 
         h3 {
             grid-area: lmbTituloCiudad;
-            background-color: rgb(121, 179, 191);
+            background: rgb(51,170,255);
+            background: linear-gradient(180deg, rgba(51,170,255,1) 5%, rgba(137,217,252,1) 50%, rgba(51,170,255,1) 95%);
             border: 2px solid black;
             border-radius: 5px;
             width: 100%;
+            padding: 10px;
+            text-align: center;
+            justify-content: center;
+
         }
 
         p {

@@ -1,7 +1,8 @@
 /*Se configura el header*/
 header {
     grid-area: header;
-    background-color: rgb(137, 210, 220);
+    background: rgb(135,231,255);
+    background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 45px 105px;
@@ -14,7 +15,8 @@ header {
 
 .logoTitulo {
     grid-area: tituloPagina;
-    background-color: rgb(137, 210, 220);
+    background: rgb(135,231,255);
+    background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
     display: flex;
     justify-content: start;
     align-items: center;
@@ -40,7 +42,8 @@ header {
     }
 
     button {
-        background-color: rgb(137, 210, 220);
+        background: rgb(135,231,255);
+        background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
         border: none;
         padding: 5px;
         text-align: end;
@@ -58,7 +61,8 @@ header {
         padding: 0px;
         margin: 0px;
         line-height: 14px;
-        background-color: rgb(148, 216, 230);
+        background: rgb(135,231,255);
+        background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
         display: none;
         list-style: none;
         height: 105px;
@@ -82,7 +86,8 @@ header {
     & button:hover + ul, & ul:hover {
         position: relative;
         display: block;
-        background-color: rgb(148, 216, 230);
+        background: rgb(135,231,255);
+        background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
         list-style: none;
         text-align: justify;
         z-index: 10;
@@ -105,8 +110,11 @@ header {
 /*Media Query del menu en header*/
 @media  (min-width: 768px) {
     .menuHeader{
+        grid: menuHeader;
+        
         button {
-            background-color: rgb(137, 210, 220);
+            background: rgb(135,231,255);
+            background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
             display: none;
             border: none;
             padding: 5px;
@@ -115,9 +123,10 @@ header {
                 display: none;
             }
         }
-
+    
         ul {
-            background-color: rgb(137, 210, 220);
+            background: rgb(135,231,255);
+            background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -140,9 +149,10 @@ header {
             padding: 2px 5px 2px 5px;
         }
 
-        /* Se elimina el menú desplegable que se mostraba al hacer el menú desplegable al hacer clic en el botón */
+        /* Se elimina el menú desplegable que se mostraba al hacer clic en el botón */
         & button:hover + ul, & ul:hover {
-            background-color: rgb(137, 210, 220);
+            background: rgb(135,231,255);
+            background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -155,9 +165,4 @@ header {
             font-size: medium;
         }
     } 
-
-     
-
-
-
 }

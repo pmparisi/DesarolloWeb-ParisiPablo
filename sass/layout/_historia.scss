@@ -1,6 +1,7 @@
 /*Se configura el main de Historia*/
 #historia {
-    background-color: rgb(137, 210, 220);
+    background: rgb(135,231,255);
+    background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
     grid-area: main;
     display: grid;
     grid-template-columns: 100%;
@@ -63,7 +64,8 @@
     font-weight: bold;
 
     li {
-        background-color: rgb(137, 199, 211);
+        background: rgb(51,170,255);
+        background: linear-gradient(180deg, rgba(51,170,255,1) 5%, rgba(137,217,252,1) 50%, rgba(51,170,255,1) 95%);
         border: 2px solid black;
         width: 300px;
         border-radius: 5px;
@@ -82,7 +84,8 @@
 }
 
 .historiaArgentina {
-    background-color: rgb(137, 199, 211);
+    background: rgb(0,183,228);
+    background: linear-gradient(0deg, rgba(0,183,228,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
     
     article {
         grid-area: zonas;
@@ -173,7 +176,6 @@
 @media  (min-width: 768px) {
 
     #historia {
-        background-color: rgb(137, 210, 220);
         grid-area: main;
         display: grid;
         grid-template-columns: 0.2fr 3fr;

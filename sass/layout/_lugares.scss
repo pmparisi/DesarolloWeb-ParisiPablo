@@ -1,6 +1,7 @@
 /*Se configura el main de Lugares*/
 #lugares {
-    background-color: rgb(137, 210, 220);
+    background: rgb(135,231,255);
+    background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
     grid-area: main;
     display: grid;
     grid-template-columns: 100%;
@@ -64,7 +65,8 @@
     font-weight: bold;
 
     li {
-        background-color: rgb(137, 199, 211);
+        background: rgb(51,170,255);
+        background: linear-gradient(180deg, rgba(51,170,255,1) 5%, rgba(137,217,252,1) 50%, rgba(51,170,255,1) 95%);
         border: 2px solid black;
         width: 300px;
         border-radius: 5px;
@@ -83,8 +85,9 @@
 }
 
 .lugaresZonas {
-    background-color: rgb(137, 199, 211);
-
+    background: rgb(0,183,228);
+    background: linear-gradient(0deg, rgba(0,183,228,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+    
     section {
         grid-area: zonas;
         display: grid;
@@ -112,24 +115,44 @@
         grid-area: cuadrante1;
         margin-top: 10px;
         margin-bottom: 10px;
+
+        &:hover {
+            transition: 2500ms;
+            transform: rotateY(360deg);
+        }
     }
 
     .cuadrante_2 {
         grid-area: cuadrante2;
         margin-top: 10px;
         margin-bottom: 10px;
+
+        &:hover {
+            transition: 2500ms;
+            transform: rotateY(360deg);
+        }
     }
     
     .cuadrante_3 {
         grid-area: cuadrante3;
         margin-top: 10px;
         margin-bottom: 10px;
+
+        &:hover {
+            transition: 2500ms;
+            transform: rotateY(360deg);
+        }
     }
 
     .cuadrante_4 {
         grid-area: cuadrante4;
         margin-top: 10px;
         margin-bottom: 10px;
+
+        &:hover {
+            transition: 2500ms;
+            transform: rotateY(360deg);
+        }
     }
 
     div {
@@ -259,18 +282,38 @@
 
         .cuadrante_1 {
             grid-area: cuadrante1;
+
+            &:hover {
+                transition: 2500ms;
+                transform: rotateY(360deg);
+            }
         }
 
         .cuadrante_2 {
             grid-area: cuadrante2;
+
+            &:hover {
+                transition: 2500ms;
+                transform: rotateY(360deg);
+            }
         }
 
         .cuadrante_3 {
             grid-area: cuadrante3;
+
+            &:hover {
+                transition: 2500ms;
+                transform: rotateY(360deg);
+            }
         }
 
         .cuadrante_4 {
             grid-area: cuadrante4;
+
+            &:hover {
+                transition: 2500ms;
+                transform: rotateY(360deg);
+            }
         }
     }
 }
