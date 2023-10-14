@@ -39,13 +39,21 @@ header {
   display: flex;
   justify-content: start;
   align-items: center;
+  padding: 2px;
 }
-.logoTitulo h1 {
+.logoTitulo a {
+  text-decoration: none;
+  color: black;
+  list-style-type: none;
+  text-align: justify;
+}
+.logoTitulo a h1 {
   font-size: medium;
+  font-weight: bolder;
   margin: 0px 5px 0px 5px;
 }
-.logoTitulo img {
-  margin: 0px 5px 0px 5px;
+.logoTitulo a img {
+  margin: 2px 5px 2px 5px;
   width: 40px;
   height: 40px;
 }
@@ -83,7 +91,6 @@ header {
 }
 .menuHeader ul a {
   text-decoration: none;
-  text-align: center;
   color: black;
   list-style-type: none;
   font-size: smaller;
@@ -142,7 +149,6 @@ header {
   }
   .menuHeader ul a {
     text-decoration: none;
-    text-align: center;
     color: black;
     list-style-type: none;
     font-size: small;
@@ -195,12 +201,17 @@ header {
   text-align: center;
   padding: 5px;
 }
-.articleSobreArgentina p {
+.articleSobreArgentina div {
+  display: flex;
+  flex-direction: column;
   border: 2px solid black;
   border-radius: 5px;
   background-color: white;
   text-align: justify;
   padding: 5px;
+}
+.articleSobreArgentina div p {
+  font-weight: bold;
 }
 .articleSobreArgentina iframe {
   border: 2px solid black;
@@ -216,20 +227,20 @@ header {
   flex-direction: column;
   height: auto;
 }
-#losMasBuscados div {
+#losMasBuscados .titulolosMasBuscados {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px;
   width: 100%;
 }
-#losMasBuscados div img {
+#losMasBuscados .titulolosMasBuscados img {
   width: 30px;
   height: 30px;
   margin-left: 5px;
   margin-right: 5px;
 }
-#losMasBuscados div h2 {
+#losMasBuscados .titulolosMasBuscados h2 {
   color: rgb(69, 63, 63);
   font-size: medium;
   margin-left: 5px;
@@ -239,7 +250,7 @@ header {
   display: grid;
   text-align: center;
   grid-template-columns: 100%;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto;
   grid-template-areas: "lmbImagen" "lmbTituloCiudad" "lmbTextoCiudad";
   justify-items: center;
   padding: 5px;
@@ -264,17 +275,20 @@ header {
   text-align: center;
   justify-content: center;
 }
-#losMasBuscados article p {
+#losMasBuscados article div {
   grid-area: lmbTextoCiudad;
   border: 2px solid black;
   border-radius: 5px;
   background-color: white;
+  display: flex;
+  flex-direction: column;
   text-align: justify;
+  height: 50px;
   padding: 5px;
-  height: 75px;
-  width: 100%;
   overflow-y: scroll;
-  margin-bottom: 10px;
+}
+#losMasBuscados article div p {
+  font-weight: bold;
 }
 
 /*Media Query para main de página de inicio*/
@@ -295,7 +309,7 @@ header {
     width: 350px;
     height: 250px;
   }
-  #sobreArgentina article p {
+  #sobreArgentina article div {
     grid-area: parrafoSobreArgentina;
     margin-top: 10px;
     margin-left: 25px;
@@ -327,7 +341,7 @@ header {
     margin-top: 10px;
     margin-bottom: 0px;
   }
-  #losMasBuscados article p {
+  #losMasBuscados article div {
     grid-area: lmbTextoCiudad;
     width: 400px;
     height: 250px;
@@ -362,6 +376,7 @@ header {
   text-align: center;
 }
 .lugaresJurisdicciones p {
+  font-weight: bold;
   border: 2px solid black;
   border-radius: 5px;
   background-color: white;
@@ -375,6 +390,7 @@ header {
 }
 
 .selectorBoton button {
+  font-weight: bold;
   background-color: white;
   border: 2px solid black;
   border-radius: 5px;
@@ -514,6 +530,7 @@ header {
     text-align: center;
   }
   .lugaresJurisdicciones p {
+    font-weight: bold;
     border: 2px solid black;
     border-radius: 5px;
     background-color: white;
@@ -621,6 +638,7 @@ header {
   text-align: center;
 }
 .historiaJurisdicciones p {
+  font-weight: bold;
   border: 2px solid black;
   border-radius: 5px;
   background-color: white;
@@ -634,6 +652,7 @@ header {
 }
 
 .selectorBotonHistoria button {
+  font-weight: bold;
   background-color: white;
   border: 2px solid black;
   border-radius: 5px;
@@ -702,6 +721,7 @@ header {
   padding: 5px;
 }
 .historiaArgentina article p {
+  font-weight: bold;
   border: 2px solid black;
   border-radius: 5px;
   background-color: white;
@@ -709,6 +729,20 @@ header {
   text-align: justify;
   width: auto;
   height: auto;
+}
+.historiaArgentina article .breveHistoria {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px;
+  width: auto;
+  height: auto;
+}
+.historiaArgentina article .breveHistoria p {
+  border: none;
+  border-radius: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 #historia div {
@@ -756,6 +790,14 @@ header {
     align-items: start;
     text-align: center;
     margin-bottom: 10px;
+  }
+  #historia .bandera {
+    width: 250px;
+    height: 100px;
+  }
+  #historia .ubicacionArgentina {
+    width: 250px;
+    height: 100px;
   }
   .historiaJurisdicciones h2 {
     color: rgb(69, 63, 63);
@@ -806,6 +848,41 @@ header {
     height: 880px;
   }
   .historiaArgentina article {
+    grid-template-areas: "tituloCiudadHistoria tituloCiudadHistoria" "parrafoHistoria parrafoHistoria" "Imagenes_audio Imagenes_audio";
+  }
+  .historiaArgentina article h2 {
+    grid-area: tituloCiudadHistoria;
+    text-align: center;
+  }
+  .historiaArgentina article h3 {
+    font-size: medium;
+    grid-area: tituloCiudadHistoria;
+    text-align: center;
+  }
+  .historiaArgentina article h4 {
+    font-size: small;
+    font-weight: bold;
+  }
+  .historiaArgentina article p {
+    grid-area: parrafoHistoria;
+    width: 100%;
+    max-width: 650px;
+    height: 100%;
+  }
+  .historiaArgentina article .breveHistoria {
+    grid-area: parrafoHistoria;
+    border: 2px solid black;
+    height: auto;
+    width: 100%;
+    max-width: 350px;
+  }
+  .historiaArgentina article div {
+    grid-area: Imagenes_audio;
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .historiaArgentina #articleHistoriaArgentina {
     grid-area: zonasHistoria;
     display: grid;
     grid-template-columns: auto 300px;
@@ -814,28 +891,12 @@ header {
     justify-content: center;
     align-items: center;
   }
-  .historiaArgentina article h2 {
-    grid-area: tituloCiudadHistoria;
-    text-align: center;
-  }
-  .historiaArgentina article h3 {
-    grid-area: tituloCiudadHistoria;
-    text-align: center;
-  }
-  .historiaArgentina article p {
+  .historiaArgentina #articleHistoriaArgentina p {
     grid-area: parrafoHistoria;
-    border: 2px solid black;
     width: 100%;
+    min-width: none;
     max-width: 350px;
-    margin: 10px;
     height: 100%;
-    margin: 10px 5px 10px 5px;
-  }
-  .historiaArgentina article div {
-    grid-area: Imagenes_audio;
-    width: auto;
-    margin-left: 10px;
-    margin-right: 10px;
   }
 }
 /*Se configura el main de Sobre Nosotros*/
@@ -873,10 +934,10 @@ header {
   justify-content: center;
   align-items: center;
   padding: 5px;
-  margin-bottom: 10px;
   max-width: 310px;
 }
 #sobreNosotros p {
+  margin-bottom: 0px;
   min-width: 290px;
 }
 #sobreNosotros img {
@@ -889,30 +950,46 @@ header {
 /*Media Query para main de página de Sobre Nosotros*/
 @media (min-width: 768px) {
   #sobreNosotros {
-    height: 70vh;
+    height: auto;
+  }
+  #sobreNosotros .cont1 {
+    margin: 10px 0px 10px 0px;
+    text-align: center;
   }
   #sobreNosotros .cont2 {
+    margin-top: 100px;
+    margin-bottom: 70px;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+  }
+  #sobreNosotros h2 {
+    color: rgb(69, 63, 63);
+    font-weight: bold;
+    margin: 10px;
+    padding: 5px;
   }
   #sobreNosotros .textoNosotros {
     border: 2px solid black;
     border-radius: 5px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
     text-align: justify;
-    justify-content: center;
+    margin-bottom: 0px;
+    max-width: none;
     padding: 5px;
-    margin: 0px 10px 0px 10px;
+    height: 250px;
+    justify-content: start;
   }
   #sobreNosotros p {
-    height: 247px;
+    font-weight: bold;
+    margin: 0px;
   }
   #sobreNosotros section div img {
     margin-top: 0px;
     border-radius: 5px;
-    height: 275px;
-    width: 350px;
+    height: 250px;
   }
 }
 /*Se configura el main de Contacto*/
@@ -1023,13 +1100,13 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 66vh;
   }
   #contacto h2 {
     grid-area: tituloContacto;
     align-items: center;
     justify-content: center;
     padding: 5px;
+    margin: 10px;
   }
   .formulario {
     grid-area: formularioDeContacto;
@@ -1039,8 +1116,8 @@ textarea {
     grid-template-areas: "nombre consulta" "email consulta" "botones botones";
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
   .formulario div {
     display: inline-block;
@@ -1106,8 +1183,11 @@ footer {
   background-color: rgb(66, 65, 65);
   grid-area: footer;
   text-align: center;
+  font-weight: small;
 }
 footer h2 {
+  font-size: medium;
+  font-weight: bold;
   margin-top: 10px;
   margin-bottom: 10px;
   color: white;

@@ -3,8 +3,11 @@ footer {
     background-color: rgb(66, 65, 65);
     grid-area: footer;
     text-align: center;
+    font-weight: small;
 
     h2 {
+        font-size: medium;
+        font-weight: bold;
         margin-top: 10px;
         margin-bottom: 10px;
         color: white;
