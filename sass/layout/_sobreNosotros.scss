@@ -1,8 +1,13 @@
+/*Se agrega mixin de color de fondo*/
+@mixin color-fondo1 {
+    background: rgb(135,231,255);
+    background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+}
+
 /*Se configura el main de Sobre Nosotros*/
 #sobreNosotros {
     grid-area: main;
-    background: rgb(135,231,255);
-    background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+    @include color-fondo1;
     
     .col-6 {
         padding: 0px;
@@ -41,6 +46,7 @@
     }
 
     p {
+        font-weight: bold;
         margin-bottom: 0px;
         min-width: 290px;
     }
@@ -72,8 +78,6 @@
         }
 
         h2 {
-            color: rgb(69, 63, 63);
-            font-weight: bold;
             margin: 10px;
             padding: 5px;
         }
@@ -93,7 +97,6 @@
         }
 
         p {
-            font-weight: bold;
             margin: 0px;
         }
 

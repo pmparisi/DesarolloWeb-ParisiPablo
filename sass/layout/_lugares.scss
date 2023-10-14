@@ -1,7 +1,22 @@
-/*Se configura el main de Lugares*/
-#lugares {
+/*Se agrega mixin de color de fondo*/
+@mixin color-fondo1 {
     background: rgb(135,231,255);
     background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+}
+
+@mixin color-fondo2 {
+    background: rgb(0,183,228);
+    background: linear-gradient(0deg, rgba(0,183,228,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+}
+
+@mixin color-fondo-li {
+    background: rgb(51,170,255);
+    background: linear-gradient(180deg, rgba(51,170,255,1) 5%, rgba(137,217,252,1) 50%, rgba(51,170,255,1) 95%);
+}
+
+/*Se configura el main de Lugares*/
+#lugares {
+    @include color-fondo1;
     grid-area: main;
     display: grid;
     grid-template-columns: 100%;
@@ -67,8 +82,8 @@
     font-weight: bold;
 
     li {
-        background: rgb(51,170,255);
-        background: linear-gradient(180deg, rgba(51,170,255,1) 5%, rgba(137,217,252,1) 50%, rgba(51,170,255,1) 95%);
+        
+        @include color-fondo-li;
         border: 2px solid black;
         width: 300px;
         border-radius: 5px;
@@ -87,8 +102,7 @@
 }
 
 .lugaresZonas {
-    background: rgb(0,183,228);
-    background: linear-gradient(0deg, rgba(0,183,228,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+    @include color-fondo2;
     
     section {
         grid-area: zonas;
@@ -188,7 +202,6 @@
 /*Media Query para main de página de lugares*/
 @media  (min-width: 768px) {
     #lugares {
-        background-color: rgb(137, 210, 220);
         grid-area: main;
         display: grid;
         grid-template-columns: 0.2fr 3fr;
@@ -220,9 +233,6 @@
 
         p {
             font-weight: bold;
-            border: 2px solid black;
-            border-radius: 5px;
-            background-color: white;
             padding: 5px;
             justify-content: center;
             align-items: center;
@@ -236,9 +246,6 @@
     .selectorBoton {
         button {
             display: none;
-            background-color: white;
-            border: 2px solid black;
-            border-radius: 5px;
             justify-content: center;
             width: 300px;
             height: 25px;
@@ -252,7 +259,6 @@
         font-weight: bold;
 
         li {
-            background-color: rgb(137, 199, 211);
             border: 2px solid black;
             width: 150px;
             border-radius: 0px;

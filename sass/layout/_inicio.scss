@@ -1,3 +1,14 @@
+/*Se agrega mixin de color de fondo*/
+@mixin color-fondo1 {
+    background: rgb(135,231,255);
+    background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+}
+
+@mixin color-fondo2 {
+    background: rgb(0,183,228);
+    background: linear-gradient(0deg, rgba(0,183,228,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+}
+
 /*Se configura el main de Inicio*/
 #inicio {
     grid-area: main;
@@ -10,8 +21,7 @@
 }
 
 #sobreArgentina {
-    background: rgb(135,231,255);
-    background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+    @include color-fondo1;
     grid-area: section1;
     height: auto;
     width: auto;
@@ -50,8 +60,7 @@
 }
 
 #losMasBuscados {
-    background: rgb(0,183,228);
-    background: linear-gradient(0deg, rgba(0,183,228,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+    @include color-fondo2;
     grid-area: section2;
     display: flex;
     flex-direction: column;

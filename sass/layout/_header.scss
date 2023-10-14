@@ -1,8 +1,13 @@
+/*Se agrega mixin de color de fondo*/
+@mixin color-fondo1 {
+    background: rgb(135,231,255);
+    background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+}
+
 /*Se configura el header*/
 header {
     grid-area: header;
-    background: rgb(135,231,255);
-    background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+    @include color-fondo1;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 45px 105px;
@@ -15,8 +20,7 @@ header {
 
 .logoTitulo {
     grid-area: tituloPagina;
-    background: rgb(135,231,255);
-    background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+    @include color-fondo1;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -51,8 +55,7 @@ header {
     }
 
     button {
-        background: rgb(135,231,255);
-        background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+        @include color-fondo1;
         border: none;
         padding: 5px;
         text-align: end;
@@ -70,8 +73,7 @@ header {
         padding: 0px;
         margin: 0px;
         line-height: 14px;
-        background: rgb(135,231,255);
-        background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+        @include color-fondo1;
         display: none;
         list-style: none;
         height: 105px;
@@ -94,8 +96,7 @@ header {
     & button:hover + ul, & ul:hover {
         position: relative;
         display: block;
-        background: rgb(135,231,255);
-        background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+        @include color-fondo1;
         list-style: none;
         text-align: justify;
         z-index: 10;
@@ -121,8 +122,7 @@ header {
         grid: menuHeader;
         
         button {
-            background: rgb(135,231,255);
-            background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+            @include color-fondo1;
             display: none;
             border: none;
             padding: 5px;
@@ -133,8 +133,7 @@ header {
         }
     
         ul {
-            background: rgb(135,231,255);
-            background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+            @include color-fondo1;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -158,8 +157,7 @@ header {
 
         /* Se elimina el menú desplegable que se mostraba al hacer clic en el botón */
         & button:hover + ul, & ul:hover {
-            background: rgb(135,231,255);
-            background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+            @include color-fondo1;
             display: flex;
             justify-content: space-around;
             align-items: center;

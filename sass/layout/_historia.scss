@@ -1,7 +1,22 @@
-/*Se configura el main de Historia*/
-#historia {
+/*Se agrega mixin de color de fondo*/
+@mixin color-fondo1 {
     background: rgb(135,231,255);
     background: linear-gradient(180deg, rgba(135,231,255,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+}
+
+@mixin color-fondo2 {
+    background: rgb(0,183,228);
+    background: linear-gradient(0deg, rgba(0,183,228,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+}
+
+@mixin color-fondo-li {
+    background: rgb(51,170,255);
+    background: linear-gradient(180deg, rgba(51,170,255,1) 5%, rgba(137,217,252,1) 50%, rgba(51,170,255,1) 95%);
+}
+
+/*Se configura el main de Historia*/
+#historia {
+    @include color-fondo1;
     grid-area: main;
     display: grid;
     grid-template-columns: 100%;
@@ -65,9 +80,8 @@
     list-style: none;
     font-weight: bold;
 
-    li {
-        background: rgb(51,170,255);
-        background: linear-gradient(180deg, rgba(51,170,255,1) 5%, rgba(137,217,252,1) 50%, rgba(51,170,255,1) 95%);
+    li {    
+        @include color-fondo-li;
         border: 2px solid black;
         width: 300px;
         border-radius: 5px;
@@ -86,8 +100,7 @@
 }
 
 .historiaArgentina {
-    background: rgb(0,183,228);
-    background: linear-gradient(0deg, rgba(0,183,228,1) 0%, rgba(50,214,255,1) 46%, rgba(135,231,255,1) 72%);
+    @include color-fondo2;
     
     article {
         grid-area: zonas;

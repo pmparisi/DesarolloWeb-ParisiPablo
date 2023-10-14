@@ -21,6 +21,7 @@ body {
   grid-template-areas: "header" "main" "footer";
 }
 
+/*Se agrega mixin de color de fondo*/
 /*Se configura el header*/
 header {
   grid-area: header;
@@ -173,6 +174,7 @@ header {
     font-size: medium;
   }
 }
+/*Se agrega mixin de color de fondo*/
 /*Se configura el main de Inicio*/
 #inicio {
   grid-area: main;
@@ -348,6 +350,7 @@ header {
     overflow-y: hidden;
   }
 }
+/*Se agrega mixin de color de fondo*/
 /*Se configura el main de Lugares*/
 #lugares {
   background: rgb(135, 231, 255);
@@ -506,7 +509,6 @@ header {
 /*Media Query para main de página de lugares*/
 @media (min-width: 768px) {
   #lugares {
-    background-color: rgb(137, 210, 220);
     grid-area: main;
     display: grid;
     grid-template-columns: 0.2fr 3fr;
@@ -531,9 +533,6 @@ header {
   }
   .lugaresJurisdicciones p {
     font-weight: bold;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: white;
     padding: 5px;
     justify-content: center;
     align-items: center;
@@ -544,9 +543,6 @@ header {
   }
   .selectorBoton button {
     display: none;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 5px;
     justify-content: center;
     width: 300px;
     height: 25px;
@@ -558,7 +554,6 @@ header {
     font-weight: bold;
   }
   .selectorJurisdiccionesListado li {
-    background-color: rgb(137, 199, 211);
     border: 2px solid black;
     width: 150px;
     border-radius: 0px;
@@ -610,6 +605,7 @@ header {
     transform: rotateY(360deg);
   }
 }
+/*Se agrega mixin de color de fondo*/
 /*Se configura el main de Historia*/
 #historia {
   background: rgb(135, 231, 255);
@@ -899,6 +895,7 @@ header {
     height: 100%;
   }
 }
+/*Se agrega mixin de color de fondo*/
 /*Se configura el main de Sobre Nosotros*/
 #sobreNosotros {
   grid-area: main;
@@ -937,6 +934,7 @@ header {
   max-width: 310px;
 }
 #sobreNosotros p {
+  font-weight: bold;
   margin-bottom: 0px;
   min-width: 290px;
 }
@@ -964,8 +962,6 @@ header {
     flex-direction: row;
   }
   #sobreNosotros h2 {
-    color: rgb(69, 63, 63);
-    font-weight: bold;
     margin: 10px;
     padding: 5px;
   }
@@ -983,7 +979,6 @@ header {
     justify-content: start;
   }
   #sobreNosotros p {
-    font-weight: bold;
     margin: 0px;
   }
   #sobreNosotros section div img {
@@ -992,6 +987,7 @@ header {
     height: 250px;
   }
 }
+/*Se agrega mixin de color de fondo*/
 /*Se configura el main de Contacto*/
 #contacto {
   grid-area: main;
@@ -1178,6 +1174,7 @@ textarea {
     width: 150px;
   }
 }
+/*Se crean dos variables modificar los margenes*/
 /*Se configura el footer*/
 footer {
   background-color: rgb(66, 65, 65);

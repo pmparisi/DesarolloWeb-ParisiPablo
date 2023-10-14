@@ -1,3 +1,7 @@
+/*Se crean dos variables modificar los margenes*/
+$margin-div: 5px;
+$margin-h2: 10px;
+
 /*Se configura el footer*/
 footer {
     background-color: rgb(66, 65, 65);
@@ -8,16 +12,16 @@ footer {
     h2 {
         font-size: medium;
         font-weight: bold;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: $margin-h2;
+        margin-bottom: $margin-h2;
         color: white;
         padding: 5px;
     }
 
     div {
         display: inline-block;
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: $margin-div;
+        margin-right: $margin-div;
     }
 
     img {
