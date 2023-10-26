@@ -7,6 +7,7 @@
 /*Se configura el main de Sobre Nosotros*/
 #sobreNosotros {
     grid-area: main;
+    height: 100vh;
     @include color-fondo1;
     
     .col-6 {
