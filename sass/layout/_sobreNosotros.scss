@@ -7,7 +7,6 @@
 /*Se configura el main de Sobre Nosotros*/
 #sobreNosotros {
     grid-area: main;
-    height: 100vh;
     @include color-fondo1;
     
     .col-6 {
@@ -63,7 +62,7 @@
 /*Media Query para main de página de Sobre Nosotros*/
 @media  (min-width: 768px) {
     #sobreNosotros {
-        height: auto;
+        height: 80vh;
 
         .cont1 {
             margin: 10px 0px 10px 0px;

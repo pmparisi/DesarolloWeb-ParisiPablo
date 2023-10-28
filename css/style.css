@@ -899,7 +899,6 @@ header {
 /*Se configura el main de Sobre Nosotros*/
 #sobreNosotros {
   grid-area: main;
-  height: 100vh;
   background: rgb(135, 231, 255);
   background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
 }
@@ -949,7 +948,7 @@ header {
 /*Media Query para main de página de Sobre Nosotros*/
 @media (min-width: 768px) {
   #sobreNosotros {
-    height: auto;
+    height: 80vh;
   }
   #sobreNosotros .cont1 {
     margin: 10px 0px 10px 0px;
@@ -995,7 +994,7 @@ header {
   background: rgb(135, 231, 255);
   background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
   display: grid;
-  height: 90vh;
+  height: 80vh;
   grid-template-columns: auto;
   grid-template-rows: auto auto;
   grid-template-areas: "titulo" "formulario";
