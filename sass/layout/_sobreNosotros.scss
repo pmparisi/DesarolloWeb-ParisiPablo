@@ -8,6 +8,7 @@
 #sobreNosotros {
     grid-area: main;
     @include color-fondo1;
+    height: 100vh;
     
     .col-6 {
         padding: 0px;

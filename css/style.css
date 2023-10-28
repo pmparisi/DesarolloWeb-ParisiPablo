@@ -901,6 +901,7 @@ header {
   grid-area: main;
   background: rgb(135, 231, 255);
   background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
+  height: 100vh;
 }
 #sobreNosotros .col-6 {
   padding: 0px;
@@ -994,7 +995,7 @@ header {
   background: rgb(135, 231, 255);
   background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
   display: grid;
-  height: 80vh;
+  height: 100vh;
   grid-template-columns: auto;
   grid-template-rows: auto auto;
   grid-template-areas: "titulo" "formulario";
@@ -1097,6 +1098,7 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    height: 90vh;
   }
   #contacto h2 {
     grid-area: tituloContacto;
@@ -1139,7 +1141,7 @@ textarea {
   form .entradaConsulta {
     position: relative;
     grid-area: consulta;
-    width: auto;
+    width: 370px;
     margin: 0px;
     margin-top: 10px;
     margin-bottom: 10px;
