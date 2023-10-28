@@ -901,7 +901,7 @@ header {
   grid-area: main;
   background: rgb(135, 231, 255);
   background: linear-gradient(180deg, rgb(135, 231, 255) 0%, rgb(50, 214, 255) 46%, rgb(135, 231, 255) 72%);
-  height: 100vh;
+  height: 120vh;
 }
 #sobreNosotros .col-6 {
   padding: 0px;
